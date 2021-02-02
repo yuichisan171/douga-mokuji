@@ -1,0 +1,10 @@
+{
+  "name": "douga-mokuji",
+  "description": "ニコニコ動画の一部の時間を指定して目次にするアプリ",
+  "repository": "https://github.com/yuichisan171/douga-mokuji",
+  "logo": "",
+  "keywords": [
+    "node"
+  ],
+  "image": "heroku/nodejs"
+}
