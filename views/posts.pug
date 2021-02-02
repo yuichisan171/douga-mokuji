@@ -24,6 +24,7 @@ html(lang="ja")
         button(type="submit").btn.btn-primary POST
     h2 投稿一覧
     each post in posts
+      h3 #{post.id} : ID:#{post.trackingCookie}
       div.card.my-3
         table.table
           tr
