@@ -35,8 +35,8 @@ html(lang="ja")
               script(type='application/javascript' src=`https://embed.nicovideo.jp/watch/sm${post.url}/script?w=640&h=360`)
               noscript
                 a(href=`https://www.nicovideo.jp/watch/sm${post.url}`)
-            td
-              p!= post.content
+            td(style="overflow:scroll;")
+              p.card-text(style="height:350px; width:300px; white-space:pre; overflow:auto;") #{post.content}
         div.card-footer
           - var isPostedByAdmin = (post.postedBy === 'admin')
           if isPostedByAdmin
