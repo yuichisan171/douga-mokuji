@@ -18,8 +18,8 @@ html(lang="ja")
     div.text-center 目次を入れたい動画を投稿
     form(method="post" action="/posts")
       div
-        input(name="url" placeholder="niconicoのurlを入力 (例: https://www.nicovideo.jp/watch/sm12345678)").form-control
-        span.card-subtitle.mb-2.text-muted ※ niconicoのurl末尾が8桁のurl対応のみ。niconico以外の動画サービスは未対応です。
+        input(name="url" placeholder="niconicoのurlを入力 (例: https://www.nicovideo.jp/watch/sm12345678 or sm12345678)").form-control
+        span.card-subtitle.mb-2.text-muted ※ niconico以外の動画サービスは未対応です。
       div.form-group
         textarea(name="content" cols=40 rows=5 placeholder="00:00 コメント 00:30 コメントetc...").form-control
       div.text-center
@@ -33,9 +33,10 @@ html(lang="ja")
             th 説明文
           tr
             td
-              script(type='application/javascript' src=`https://embed.nicovideo.jp/watch/sm${post.url}/script?w=640&h=360`)
+              - var niconicoMovieId = post.url.split('sm')[1]
+              script(type='application/javascript' src=`https://embed.nicovideo.jp/watch/sm${niconicoMovieId}/script?w=640&h=360`)
               noscript
-                a(href=`https://www.nicovideo.jp/watch/sm${post.url}`)
+                a(href=`https://www.nicovideo.jp/watch/sm${niconicoMovieId}`)
             td(style="overflow:scroll;")
               p.card-text(style="height:350px; width:300px; white-space:pre; overflow:auto;") #{post.content}
         div.card-footer
