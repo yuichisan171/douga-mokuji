@@ -4,7 +4,7 @@
   "description": "動画の目次を入れるアプリ",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "npx jest --testTimeout=10000 --forceExit"
   },
   "license": "MIT",
   "dependencies": {
@@ -18,5 +18,9 @@
   },
   "engines": {
     "node": "~10"
+  },
+  "devDependencies": {
+    "jest": "25.1.0",
+    "supertest": "3.1.0"
   }
 }

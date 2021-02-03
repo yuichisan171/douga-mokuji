@@ -6,9 +6,10 @@ const html = pug.renderFile('./views/posts.pug', {
   posts: [
     {
       id: 1,
+      url: "https://www.nicovideo.jp/watch/sm12345678",
       content: "<script>alert('test');</script>",
       postedBy: 'guest1',
-      trackingCookie: '1234567812345678_bb92126be15c1995c1d3d03db910a69e1521129dd70fae16552d6d9cb419584e05d6818e8ca43901',
+      trackingCookie: "1234567812345678_bb92126be15c1995c1d3d03db910a69e1521129d",
       createdAt: new Date(),
       updatedAt: new Date()
     }
