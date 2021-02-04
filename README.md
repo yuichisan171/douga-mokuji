@@ -1,17 +1,46 @@
 # douga-mokuji
-Basic認証を用いた動画の時間指定を提供する目次職人のためのアプリ
+動画の目次を作り、時間毎の映像を視聴するためのアプリ
+https://arcane-depths-59921.herokuapp.com/posts
 
-# DEMO
-![0582c3c30dc5d4ac3e827cae0aa5e186](https://user-images.githubusercontent.com/58941860/106393056-295f7500-6438-11eb-8a75-634be56bddb1.png)
+![e8fb6ee6edf3ba1307c473964066325d.png](https://user-images.githubusercontent.com/58941860/106844903-17f2c300-66ed-11eb-92dd-e31c000ec605.png)
+
+
+**ユーザー名、パスワードは以下です。**
+
+- guest1のアカウント
+ユーザー名：guest1
+パスワード：1234
+
+- guest2のアカウント
+ユーザー名：guest2
+パスワード：5678
 
 # 使用方法
-niconicoのURLと、説明文に時間を指定するメッセージを残して投稿します。
+niconicoのURLと、説明文に時間とその映像の内容を投稿します。
+お手数ですが、説明文の指定時間をもとに手動で指定してください。
 
-# なぜこのアプリを作ったのか
-動画のシーン毎の時間を指定して、他の視聴者に使いやすくする目次職人を支援するためのアプリです。
-視聴者側は、サビ聴きたい、神回や自分のお気に入りなどのシーンをもう一度見たい、忙しい人のために要点をすぐに見たいetc...そんな効率良く動画を視聴したい人向けのために作りました。
+# 製作背景
+動画のシーン毎を設定して、リスナー側が目的の映像をすぐ探せるために作りました。
+長時間の動画であっても目的の部分までスキップしてみることができるようにしました。
+手動で探すことになりますので、いつか自動でできる機能を追加していくのが今後の課題かもしれません。
 
 # 技術
 - Languages : HTML / JavaScript
-- Framework : Node.js
-- Tool, Package : Pug / PostgreSQL / Bootstrap
+- Framework : Node.js 10.14.2
+- Tool, Package : Pug / PostgreSQL 12.3 / Bootstrap 4.0.0
+
+# 環境構築
+
+```
+$ mkdir hoge
+$ cd hoge
+$ git clone git@github.com:yuichisan171/douga-mokuji.git
+$ cd douga-mokuji
+$ yarn install
+```
+
+テストはassertを使用。
+
+```
+$ node test.js
+```
